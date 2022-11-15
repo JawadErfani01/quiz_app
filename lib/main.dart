@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'Welcome to Flutter',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Welcome to Flutter Quiz App with Jawad Erfani'),
+          title: const Text('Welcome to Quiz app '),
         ),
         body: const Center(
           child: Text('Hey! Do you want to try a Quiz?'),
