@@ -107,7 +107,7 @@ class QuizApp extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 15),
-              normalText(color: lightgrey, size: 18, text: "Welcome to our"),
+              normalText(color: lightgrey, size: 18, text: "Welcome to My"),
               headingText(color: Colors.white, size: 32, text: "Quiz App"),
               const SizedBox(height: 15),
               normalText(
@@ -115,9 +115,16 @@ class QuizApp extends StatelessWidget {
                   size: 16,
                   text:
                       "Do you feel confident? Here you will face our most important CS questions!"),
-              const Padding(
-                  padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text("this is input")),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                    border: UnderlineInputBorder(),
+                    labelText: 'Enter your username',
+                  ),
+                ),
+              ),
               const Spacer(),
               Align(
                 alignment: Alignment.center,
