@@ -1,6 +1,8 @@
-import 'package:demo_application/const/colors.dart';
-import 'package:demo_application/const/text_style.dart';
-
+import 'package:quizapp/const/colors.dart';
+import 'package:quizapp/const/text_style.dart';
+import 'package:quizapp/profile.dart';
+import 'package:quizapp/quiz_screen.dart';
+import 'package:quizapp/user_list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -29,7 +31,10 @@ class App extends StatelessWidget {
 
 class QuizApp extends StatelessWidget {
   const QuizApp({Key? key}) : super(key: key);
-
+  void _onTap(context) {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => const QuizScreen()));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +65,11 @@ class QuizApp extends StatelessWidget {
                     ),
                     child: IconButton(
                       onPressed: () {
-                     
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const UserList()),
+                        );
                       },
                       icon: const Icon(
                         CupertinoIcons.person_3,
@@ -76,7 +85,11 @@ class QuizApp extends StatelessWidget {
                     ),
                     child: IconButton(
                         onPressed: () {
-                   
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const profilepage()),
+                          );
                         },
                         icon: const Icon(
                           CupertinoIcons.person_alt_circle,
@@ -110,7 +123,7 @@ class QuizApp extends StatelessWidget {
                 alignment: Alignment.center,
                 child: GestureDetector(
                   onTap: () {
-                   
+                    _onTap(context);
                   },
                   child: Container(
                     margin: const EdgeInsets.only(bottom: 20),
